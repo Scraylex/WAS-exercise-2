@@ -1,0 +1,29 @@
+@startuml graph
+
+(at-reception) as reception
+(at-storage) as storage
+(at-room) as room
+(at-storage, hoover) as storage1
+(at-reception, hoover) as reception1
+(at-room, hoover) as room1
+(at-room-, hoover, clean-room) as room2
+(start) as init
+(end) as exit
+init -> reception
+reception -r-> storage: move
+reception -u-> room
+room -> reception: move
+room -> storage
+storage -> room: move
+storage -> reception
+storage -> storage1
+storage1 -d-> reception1
+storage1 -> room1
+reception1 -> storage1
+reception1 -> room1
+room1 -> storage1
+room1 -> reception1
+room1 -> room2
+room2 -> exit
+
+@enduml

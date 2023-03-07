@@ -20,6 +20,10 @@ Specifically at the point after getting the hoover it is possible to either go d
 
 According to how the traversal algorithm functions this could recurse indefinetly.
 
+This can be seen visually in the ![Graph](graph.png) there exists triangle which could end in a permanent recursion.
+
+This problem could be remedied by makeing new actions which more clearly specify where the agent should move to or adding various other predicates ensureing a even more linear graph.
+
 ## 4) Why is the behavior not observable with your planner implementation from Task 2?
 
 Because the A* algorithm is a deterministic pathfinding algorithm i.e. in it's heuristic it will always search for the most optimal traversal path across the graph.

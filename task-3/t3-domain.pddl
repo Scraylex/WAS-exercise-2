@@ -5,7 +5,6 @@
     room storage - space
   )
   (:predicates
-    (prepared ?r - room)
     (haveHoover)
     (at ?s - space)
     (clean ?r - room)
